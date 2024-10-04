@@ -1,0 +1,33 @@
+{pkgs, dotinfo, ...}:
+let
+  username = dotinfo.username;
+in
+{
+
+  boot.extraModulePackages = [ ];
+
+  environment.systemPackages = with pkgs; [
+    docker-compose
+  ];
+
+  hardware.nvidia-container-toolkit.enable = true;
+  nixpkgs.config.cudaSupport = true;
+  programs.virt-manager.enable = true;
+
+
+
+  virtualisation = {
+    docker = {
+      enable = true;
+      # enableNvidia = true; # deprecated
+      extraOptions = "--add-runtime nvidia=/run/current-system/sw/bin/nvidia-container-runtime";
+    };
+
+    libvirtd.enable = true;
+    podman.enable = true;
+    waydroid.enable = true;
+  };
+
+  users.users.${username}.extraGroups = [ "libvirtd" "docker" ];
+
+}
