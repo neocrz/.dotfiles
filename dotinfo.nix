@@ -18,9 +18,10 @@
       keyMap = "br-abnt2";
       layout = "br";
     };
-    nix-on-droid = {
+    droid = {
       username = "droid";
       system = "aarch64-linux";
+      timeZone = "America/Sao_Paulo";
     };
   };
   # for git

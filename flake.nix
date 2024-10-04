@@ -46,5 +46,20 @@
       specialArgs = {inherit pkgs pkgs-stable inputs system; dotinfo=di;};
       modules = [ ./hosts/a5 inputs.home-manager.nixosModules.home-manager ];
     };
+
+    nixOnDroidConfigurations.default = 
+    let
+      droid = hosts.droid;
+      system = droid.system;
+      pkgs = genPkgs { n = nixpkgs; s = system; };
+      pkgs-stable = genPkgs { n = nixpkgs-stable; s = system; };
+      di = dotinfo // {username = hosts.droid.username;};
+    in
+    inputs.nix-on-droid.lib.nixOnDroidConfiguration
+    {
+      inherit pkgs;
+      extraSpecialArgs = {inherit pkgs pkgs-stable inputs system; dotinfo=di;};
+      modules = [ ./hosts/droid ];
+    };
   };
 }
