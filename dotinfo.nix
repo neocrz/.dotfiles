@@ -1,10 +1,11 @@
 {
   hosts = {
     a5 = {
+      desk-env = "gnome";
+
       hostname = "a5";
       system = "x86_64-linux";
-      username="eee";
-
+      username = "eee";
       model = "Acer aspire 5";
       hybrid = "true";
       busId = {

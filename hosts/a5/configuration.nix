@@ -2,25 +2,31 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, pkgs-stable, dotinfo, ... }:
+{ config, lib, pkgs, pkgs-stable, dotinfo, ... }:
+
 let 
   
   mods.local = import ./mods/system;
   mods.common = import ../../mods/system;
+  
   host = dotinfo.hosts.a5;
 in 
 {
+  
 
   imports =
-    [ # Include the results of the hardware scan.
+    [
       ./hardware-configuration.nix
+
     ] ++ (with mods.local; [
+
       db # database
       firewall
       games
       hybrid
       services
       virtualisation
+      desk-env.${host.desk-env}
     ])
     ++
     (with mods.common; [
@@ -60,18 +66,7 @@ in
     LC_TIME = host.extraLocale;
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = host.layout;
-    variant = "";
-  };
+  
 
   # Configure console keymap
   console.keyMap = host.keyMap;
