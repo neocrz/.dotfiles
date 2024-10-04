@@ -61,5 +61,16 @@
       extraSpecialArgs = {inherit pkgs pkgs-stable inputs system; dotinfo=di;};
       modules = [ ./hosts/droid ];
     };
+    homeConfigurations.${hosts.guest.username} = 
+    let
+      system = hosts.guest.system;
+      pkgs = genPkgs { n = nixpkgs; s = system; };
+      pkgs-stable = genPkgs { n = nixpkgs-stable; s = system; };
+      di = dotinfo // {username = hosts.guest.username;};
+    in inputs.home-manager.lib.homeManagerConfiguration
+    {
+      extraSpecialArgs = {inherit pkgs pkgs-stable inputs system; dotinfo=di;};
+      modules = [ ./hosts/guest ];
+    };
   };
 }

@@ -24,6 +24,10 @@
       system = "aarch64-linux";
       timeZone = "America/Sao_Paulo";
     };
+    guest = {
+      username = "guest";
+      system = "x86_64-linux";
+    };
   };
   # for git
   user = {
