@@ -6,7 +6,10 @@
     discord
     firefox
     libreoffice-qt
+    mpv
     obsidian
+    qbittorrent
+    scrcpy
     telegram-desktop
     vlc
     vscode
