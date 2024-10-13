@@ -3,6 +3,7 @@
 {
   home.packages = 
   (with pkgs;[
+    calibre
     discord
     firefox
     libreoffice-qt

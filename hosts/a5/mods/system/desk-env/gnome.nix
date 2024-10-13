@@ -12,4 +12,8 @@
     layout = dotinfo.hosts.a5.layout;
     variant = "";
   };
+
+  environment.systemPackages = [
+    pkgs.gnome3.gnome-tweaks
+  ];
 }

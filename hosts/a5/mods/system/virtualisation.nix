@@ -8,6 +8,9 @@ in
 
   environment.systemPackages = with pkgs; [
     docker-compose
+    playonlinux
+    winetricks
+    wineWowPackages.stable
   ];
 
   hardware.nvidia-container-toolkit.enable = true;

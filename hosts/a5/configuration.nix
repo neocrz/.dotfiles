@@ -23,6 +23,7 @@ in
       db # database
       firewall
       games
+      ibus
       hybrid
       services
       virtualisation
