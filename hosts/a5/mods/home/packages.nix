@@ -5,8 +5,10 @@
   (with pkgs;[
     calibre
     discord
+    figma-linux
     firefox
     libreoffice-qt
+    love
     mpv
     obsidian
     qbittorrent
