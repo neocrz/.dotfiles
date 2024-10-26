@@ -10,6 +10,7 @@ in
     bottles
     docker-compose
     playonlinux
+    remmina
     winetricks
     wineWowPackages.stable
   ];
