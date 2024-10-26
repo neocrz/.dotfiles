@@ -7,6 +7,7 @@ in
   boot.extraModulePackages = [ ];
 
   environment.systemPackages = with pkgs; [
+    bottles
     docker-compose
     playonlinux
     winetricks
