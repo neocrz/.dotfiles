@@ -109,7 +109,10 @@ in
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [ nix-index ];
+  environment.systemPackages = with pkgs; [
+    cachix
+    nix-index
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
