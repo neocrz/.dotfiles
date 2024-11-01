@@ -14,6 +14,6 @@
   };
 
   environment.systemPackages = [
-    pkgs.gnome3.gnome-tweaks
+    pkgs.gnome-tweaks
   ];
 }
