@@ -3,6 +3,7 @@
 {
   home.packages = 
   (with pkgs;[
+    audacity
     calibre
     discord
     figma-linux
@@ -10,6 +11,7 @@
     libreoffice-qt
     love
     mpv
+    obs-studio
     obsidian
     qbittorrent
     scrcpy

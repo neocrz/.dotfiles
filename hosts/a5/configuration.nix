@@ -25,6 +25,7 @@ in
       games
       ibus
       hybrid
+      nix-mod
       services
       virtualisation
       desk-env.${host.desk-env}
