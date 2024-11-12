@@ -7,6 +7,7 @@
       mp4 = "yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 ";
       no-rs = "sudo nixos-rebuild switch --flake ~/.dotfiles";
       no-rb = "sudo nixos-rebuild boot --flake ~/.dotfiles";
+      z = "zoxide";
     };
   };
 }

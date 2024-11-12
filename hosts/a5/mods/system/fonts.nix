@@ -17,6 +17,7 @@
       source-code-pro
       ubuntu_font_family
       unifont
+      (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
     ];
 
     fontconfig = {

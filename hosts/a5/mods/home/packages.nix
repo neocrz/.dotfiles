@@ -18,6 +18,7 @@
     telegram-desktop
     vlc
     vscode
+    wezterm
   ])
   ++ 
   (with pkgs-stable;[

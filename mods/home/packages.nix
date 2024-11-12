@@ -20,4 +20,8 @@
     enableBashIntegration = true;
     nix-direnv.enable = true;
   };
+  programs.zoxide = {
+    enable = true;
+    enableBashIntegration= true;
+  };
 }
