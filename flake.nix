@@ -13,6 +13,9 @@
       inputs.home-manager.follows = "home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixvim = {
+      url = "github:neocrz/nixvim";
+    };
   };
   
   outputs = { self, nixpkgs, nixpkgs-stable, ... }@inputs: 

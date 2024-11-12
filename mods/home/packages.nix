@@ -1,4 +1,4 @@
-{pkgs, pkgs-stable, ...}:
+{pkgs, pkgs-stable, inputs, ...}:
 
 {
   home.packages = 
@@ -9,6 +9,7 @@
     nix-tree
     peruse
     yt-dlp
+    inputs.nixvim.packages.${system}.default
   ])
   ++ 
   (with pkgs-stable;[
