@@ -1,7 +1,7 @@
 {
   hosts = {
     a5 = {
-      desk-env = "gnome";
+      desk-env = "hyprland"; # gnome hyprland
 
       hostname = "a5";
       system = "x86_64-linux";
