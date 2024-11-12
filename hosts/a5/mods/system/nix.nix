@@ -14,6 +14,9 @@
       "root"
       "@wheel"
     ];
-    trusted-substituters = [ "https://cuda-maintainers.cachix.org" "https://hydra.nixos.org/" ];
+    trusted-substituters = [ 
+      "https://cuda-maintainers.cachix.org" 
+      "https://hydra.nixos.org/" 
+    ];
   };
 }
